@@ -215,13 +215,25 @@ ul {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    background: linear-gradient(to right, #fff, var(--primary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 44px;
+    width: 44px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 10px var(--primary-glow);
+    transition: var(--transition);
+}
+
+.logo-link:hover .logo-img {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--accent-glow);
+    border-color: var(--accent);
 }
 
 .nav-links {

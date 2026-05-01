@@ -1,16 +1,32 @@
 /* style.css */
 :root {
-    --bg-dark: #f8fafc; /* Very light slate background */
-    --bg-glass: rgba(255, 255, 255, 0.85); /* White cards */
-    --glass-border: rgba(0, 0, 0, 0.08); /* Subtle dark border */
-    --text-main: #0f172a; /* Near black text */
-    --text-muted: #475569; /* Slate 600 */
-    --primary: #0070d2; /* Official Salesforce Brand Blue */
+    --bg-dark: #e2e8f0; /* Soft slate/gray tint for Light Theme */
+    --bg-glass: rgba(255, 255, 255, 0.95);
+    --bg-solid: #ffffff;
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --primary: #0070d2;
     --primary-glow: rgba(0, 112, 210, 0.2);
-    --accent: #0284c7;  /* Light blue accent */
+    --accent: #0284c7;
     --accent-glow: rgba(2, 132, 199, 0.2);
+    --footer-bg-start: rgba(226, 232, 240, 1);
     
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+[data-theme="dark"] {
+    --bg-dark: #0d1117; /* GitHub Dark Mode */
+    --bg-glass: rgba(22, 27, 34, 0.85); /* Dark cards */
+    --bg-solid: #161b22; /* Solid dark backgrounds */
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-main: #e6edf3;
+    --text-muted: #7d8590;
+    --primary: #00A1E0; /* Brighter blue for dark mode */
+    --primary-glow: rgba(0, 161, 224, 0.35);
+    --accent: #38bdf8;  /* Sky blue accent */
+    --accent-glow: rgba(56, 189, 248, 0.3);
+    --footer-bg-start: rgba(13, 17, 23, 1);
 }
 
 * {
@@ -174,7 +190,7 @@ ul {
     height: 48px;
     padding: 0;
     border-radius: 50%;
-    background: white;
+    background: var(--bg-solid);
     border: 1px solid var(--glass-border);
     display: flex;
     align-items: center;
@@ -211,7 +227,7 @@ ul {
 
 .navbar.scrolled {
     padding: 1rem 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--bg-glass);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
     box-shadow: 0 2px 15px rgba(0,0,0,0.03);
@@ -248,6 +264,50 @@ ul {
 .nav-links {
     display: flex;
     gap: 2rem;
+}
+
+.nav-contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    background: rgba(128, 128, 128, 0.1);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+    display: block;
 }
 
 .nav-links a {
@@ -491,7 +551,7 @@ section {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: white;
+    background: var(--bg-solid);
     border: 3px solid var(--primary);
     z-index: 1;
 }
@@ -635,7 +695,7 @@ section {
 /* Footer */
 .footer {
     padding-top: 5rem;
-    background: linear-gradient(to top, rgba(241, 245, 249, 1), transparent);
+    background: linear-gradient(to top, var(--footer-bg-start), transparent);
 }
 
 .footer-content {
@@ -822,7 +882,7 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, 0.98);
+        background: var(--bg-glass);
         backdrop-filter: blur(20px);
         border-left: 1px solid var(--glass-border);
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);

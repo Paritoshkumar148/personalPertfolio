@@ -587,14 +587,10 @@ section {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-}
-
-@media (max-width: 1200px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2.5rem;
 }
 
 .project-card {

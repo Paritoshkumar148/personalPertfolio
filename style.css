@@ -615,6 +615,36 @@ section {
     margin-bottom: 1.5rem;
 }
 
+.project-bullets {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.project-bullets li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.project-bullets li::before {
+    content: '➔';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--primary);
+    font-size: 0.85rem;
+}
+
+.project-bullets strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
 .project-tags {
     display: flex;
     flex-wrap: wrap;

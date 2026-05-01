@@ -13,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1.3">
+    <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 
 <body>
@@ -28,6 +28,11 @@
             <a href="#home" class="logo-link">
                 <img src="assets/images/profile.jpg" alt="Paritosh Kumar" class="logo-img" />
             </a>
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -48,7 +53,7 @@
             <div class="hero-content">
                 <span class="greeting">Hello, I'm</span>
                 <h1 class="title">Paritosh Kumar</h1>
-                <h2 class="subtitle">Salesforce <span>Developer</span></h2>
+                <h2 class="subtitle">Salesforce <span class="typing-text"></span><span class="cursor">&nbsp;</span></h2>
                 <p class="description">
                     With 2.5+ years of experience delivering robust custom Salesforce solutions on Sales Cloud, Service
                     Cloud, and Experience Cloud. Specialized in LWC, Apex, Managed Packages, and Agentforce.
@@ -328,6 +333,13 @@
             </p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 4l8 8h-6v8h-4v-8H4z" />
+        </svg>
+    </button>
 
     <script src="script.js"></script>
 </body>

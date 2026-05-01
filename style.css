@@ -221,8 +221,8 @@ ul {
 }
 
 .logo-img {
-    height: 65px;
-    width: 65px;
+    height: 85px;
+    width: 85px;
     object-fit: cover;
     object-position: top center;
     border-radius: 50%;

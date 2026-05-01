@@ -221,9 +221,10 @@ ul {
 }
 
 .logo-img {
-    height: 44px;
-    width: 44px;
+    height: 65px;
+    width: 65px;
     object-fit: cover;
+    object-position: top center;
     border-radius: 50%;
     border: 2px solid var(--primary);
     box-shadow: 0 0 10px var(--primary-glow);

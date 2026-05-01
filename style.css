@@ -411,6 +411,46 @@ section {
     box-shadow: 0 0 10px var(--primary-glow);
 }
 
+/* Skills Section */
+.skills-container {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.skill-category h3 {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin-bottom: 1.2rem;
+    border-left: 3px solid var(--primary);
+    padding-left: 1rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-tags span {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.skill-tags span:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(6, 182, 212, 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Experience Section */
 .timeline {
     position: relative;

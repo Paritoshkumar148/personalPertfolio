@@ -478,6 +478,35 @@ section {
     box-shadow: 0 0 10px var(--primary-glow);
 }
 
+.cert-download {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: rgba(1, 118, 211, 0.1);
+    padding: 0.4rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.cert-download:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--primary-glow);
+}
+
+[data-theme="dark"] .cert-download {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+}
+
+[data-theme="dark"] .cert-download:hover {
+    background: var(--primary);
+    color: white;
+}
+
 /* Skills Section */
 .skills-container {
     padding: 3rem;
